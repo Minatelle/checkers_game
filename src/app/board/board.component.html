@@ -1,0 +1,12 @@
+<div class="center">
+    <div class="board">
+        <div *ngFor="let row of board" class="row">
+            <div *ngFor="let cell of row" class="cell" [class.black]="cell === -1" [class.white]="cell === 0">
+                <div class="piece" *ngIf="cell > -1">
+                    <span class="checkers-piece"
+                    [ngClass]="{'checkers-piece--white': cell === 1, 'checkers-piece--black': cell === 2}"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
